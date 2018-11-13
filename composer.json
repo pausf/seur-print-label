@@ -1,0 +1,14 @@
+{
+    "name": "pau/seur-print-label",
+    "description": "Connect to Seur SOAP and get a label",
+    "require": {
+        "php": "^5.6 || ^7.0 || ^7.1 || ^7.2",
+        "ext-curl": "*",
+        "curl/curl": "^1.9"
+    },
+     "autoload": {
+        "psr-4": {
+            "Pau\\SeurPrintLabel\\": "src"
+        }
+    }
+}
