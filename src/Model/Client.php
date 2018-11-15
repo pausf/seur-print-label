@@ -17,6 +17,7 @@ class Client extends LabelRequest
     private $codeCountry;
     private $email;
     private $phone;
+    private $nif;
 
     /**
      * Client constructor.
@@ -33,8 +34,9 @@ class Client extends LabelRequest
      * @param $codeCountry
      * @param $email
      * @param $phone
+     * @param $nif
      */
-    public function __construct($fullName, $street, $typeStreet, $streetNumber, $streetNumber1, $stairs, $floor, $door, $town, $postalCode, $codeCountry, $email, $phone)
+    public function __construct($fullName, $street, $typeStreet, $streetNumber, $streetNumber1, $stairs, $floor, $door, $town, $postalCode, $codeCountry, $email, $phone, $nif)
     {
         $this->fullName = $fullName;
         $this->street = $street;
@@ -49,6 +51,7 @@ class Client extends LabelRequest
         $this->codeCountry = $codeCountry;
         $this->email = $email;
         $this->phone = $phone;
+        $this->nif = $nif;
     }
 
     /**
@@ -259,5 +262,20 @@ class Client extends LabelRequest
         $this->phone = $phone;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getNif()
+    {
+        return $this->nif;
+    }
+
+    /**
+     * @param mixed $nif
+     */
+    public function setNif($nif)
+    {
+        $this->nif = $nif;
+    }
 
 }

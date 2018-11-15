@@ -2,8 +2,6 @@
 
 namespace Pau\Seur\Model;
 
-use Pau\Seur\Model\Aggregate\LabelRequest;
-
 class Package extends LabelRequest
 {
     private $integrationCode;
@@ -16,6 +14,7 @@ class Package extends LabelRequest
     private $expeditionRef;
     private $refPackages;
     private $key;
+    private $accountingCode;
     private $keyValue;
     private $refundKey;
     private $refundValue;
@@ -34,13 +33,14 @@ class Package extends LabelRequest
      * @param $expeditionRef
      * @param $refPackages
      * @param $key
+     * @param $accountingCode
      * @param $keyValue
      * @param $refundKey
      * @param $refundValue
      * @param $franchiseCode
      * @param $webservice
      */
-    public function __construct($integrationCode, $service, $products, $totalPackages, $kilos, $weight, $observations, $expeditionRef, $refPackages, $key, $keyValue, $refundKey, $refundValue, $franchiseCode, $webservice)
+    public function __construct($integrationCode, $service, $products, $totalPackages, $kilos, $weight, $observations, $expeditionRef, $refPackages, $key, $accountingCode, $keyValue, $refundKey, $refundValue, $franchiseCode, $webservice)
     {
         $this->integrationCode = $integrationCode;
         $this->service = $service;
@@ -52,6 +52,7 @@ class Package extends LabelRequest
         $this->expeditionRef = $expeditionRef;
         $this->refPackages = $refPackages;
         $this->key = $key;
+        $this->accountingCode = $accountingCode;
         $this->keyValue = $keyValue;
         $this->refundKey = $refundKey;
         $this->refundValue = $refundValue;
@@ -222,6 +223,22 @@ class Package extends LabelRequest
     /**
      * @return mixed
      */
+    public function getAccountingCode()
+    {
+        return $this->accountingCode;
+    }
+
+    /**
+     * @param mixed $accountingCode
+     */
+    public function setAccountingCode($accountingCode)
+    {
+        $this->accountingCode = $accountingCode;
+    }
+
+    /**
+     * @return mixed
+     */
     public function getKeyValue()
     {
         return $this->keyValue;
@@ -298,5 +315,6 @@ class Package extends LabelRequest
     {
         $this->webservice = $webservice;
     }
+
 
 }
