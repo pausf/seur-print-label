@@ -1,23 +1,20 @@
 <?php
 
-namespace Pau\Seur;
+namespace Pau\Seur\Request;
 
 use Pau\Seur\Model\Aggregate\LabelRequest;
-use Pau\Seur\Request\SeurRequest;
-use Pau\Seur\Service\StructureXmlRequest;
 
-class SeurLabelClient
+class SeurRequest
 {
-
+    CONST URL_LABEL_SEUR = "http://cit.seur.com/CIT-war/services/ImprimirECBWebService?wsdl.com";
     private $user;
     private $password;
     private $brand;
     private $model;
     private $format;
 
-
     /**
-     * SeurLabelClient constructor.
+     * SeurRequest constructor.
      * @param string $user
      * @param string $password
      * @param string $brand
@@ -39,17 +36,10 @@ class SeurLabelClient
         $this->format=  $format;
     }
 
-    public function seurRequest(LabelRequest $label)
-    {
-        $seurRequest=new SeurRequest(
-            $this->user,
-            $this->password,
-            $this->brand,
-            $this->model,
-            $this->format
-            );
+    public function request(LabelRequest $label){
 
-        $seurRequest->request($label);
+
+
     }
 
 }

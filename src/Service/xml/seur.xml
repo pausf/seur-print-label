@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:imp="http://localhost:7026/ImprimirECBWebService">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <imp:impresionIntegracionConECBWS>
+            <imp:in0>{USER}</imp:in0>
+            <imp:in1>{PASSWORD}</imp:in1>
+            <imp:in2>{BRAND}</imp:in2>
+            <imp:in3>{MODEL}-Z</imp:in3>
+            <imp:in4>{FORMATLABEL}</imp:in4>
+            <imp:in5><![CDATA[<?xml version="1.0" encoding="ISO-8859-1"?>
+<root><exp>
+        <bulto><ci>{INTEGRATIONCODE}</ci>
+            <nif>{NIF}</nif>
+            <ccc>{ACCOUNTINGCODE}</ccc>
+            <servicio>{SERVICE}</servicio>
+            <producto>{PRODUCTS}</producto>
+            <total_bultos>{TOTALPACKAGES}</total_bultos>
+            <total_kilos>{KILOS}</total_kilos>
+            <pesoBulto>{WEIGHT}</pesoBulto>
+            <observaciones>{OBSERVATIONS}</observaciones>
+            <referencia_expedicion>{EXPEDITIONREF}</referencia_expedicion>
+            <ref_bulto>{REFPACKAGES}</ref_bulto>
+            <clavePortes>{KEY}</clavePortes>
+            <clavePod>{KEYVALUE}</clavePod>
+            <claveReembolso>{REFUNDKEY}</claveReembolso>
+            <valorReembolso>{REFUNDVALUE}</valorReembolso>
+            <nombre_consignatario>{FULLNAME}</nombre_consignatario>
+            <direccion_consignatario>{STREET}</direccion_consignatario>
+            <tipoVia_consignatario>{TYPESTREET}</tipoVia_consignatario>
+            <tNumVia_consignatario>{STREETNUMBER}</tNumVia_consignatario>
+            <numVia_consignatario>{STREETNUMBER1}</numVia_consignatario>
+            <escalera_consignatario>{STAIRS}</escalera_consignatario>
+            <piso_consignatario>{FLOOR}</piso_consignatario>
+            <puerta_consignatario>{DOOR}</puerta_consignatario>
+            <poblacion_consignatario>{TOWN}</poblacion_consignatario>
+            <codPostal_consignatario>{POSTALCODE}</codPostal_consignatario>
+            <pais_consignatario>{CODECOUNTRY}</pais_consignatario>
+            <email_consignatario>{EMAIL}</email_consignatario>
+            <telefono_consignatario>{PHONE}</telefono_consignatario>
+            <tipo_mercancia></tipo_mercancia>
+            <clave_aduana_origen></clave_aduana_origen>
+            <clave_aduana_destino></clave_aduana_destino>
+            <valor_declarado></valor_declarado>
+        </bulto>
+	</exp></root>]]></imp:in5>
+            <imp:in6>fichero.xml</imp:in6>
+            <imp:in7>{NIF}</imp:in7>
+            <imp:in8>{FRANCHISECODE}</imp:in8>
+            <imp:in9>-1</imp:in9>
+            <imp:in10>{WEBSERVICE}</imp:in10>
+        </imp:impresionIntegracionConECBWS>
+    </soapenv:Body>
+</soapenv:Envelope>
